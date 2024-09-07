@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porsche 911</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="one.css" rel="stylesheet">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.text[data-target]');
+
+      const animateCounters = () => {
+        counters.forEach(counter => {
+          const target = parseFloat(counter.getAttribute('data-target'));
+          const h2 = counter.querySelector('h2');
+
+          const updateCount = () => {
+            const currentText = h2.innerText;
+            const current = parseFloat(currentText.replace(/[^0-9.-]+/g, ""));
+            var increment = 0;
+            if (target >= 10) {
+              increment = target / 50;
+            } else {
+              increment = target / 40;
+            }
+
+            if (current < target) {
+              h2.innerText = `${(current + increment).toFixed(1)}${currentText.replace(/[0-9.-]+/g, '')}`;
+              setTimeout(updateCount, 100);
+            } else {
+              h2.innerText = `${target}${currentText.replace(/[0-9.-]+/g, '')}`;
+            }
+          };
+
+          updateCount();
+        });
+      };
+
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+
+      counters.forEach(counter => {
+        observer.observe(counter);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-item navbar-left">
+      <img src="menu3.png" alt="right Image" width="70px">
+    </div>
+    <div class="navbar-item navbar-center">
+      <img src="main.png" alt="Center Image" width="220px">
+    </div>
+    <div class="navbar-item navbar-right">
+      <img src="user.png" alt="left Image" width="45px">
+    </div>
+  </nav>
+  <div class="navbar-line"></div>
+  <div class="spacer"></div>
+
+  <br><br><br><br><br><br><br><br><br><br>
+
+  <div class="oneimage">
+    <div class="text-overlay">911</div>
+  </div>
+
+  <br>
+
+  <div class="oneimage">
+    <img src="five1.avif" alt="Porsche" width="1000px">
+  </div>
+
+  <br>
+
+  <h1 class="sub">911 Carrera Cabriolet</h1>
+
+  <br>
+
+  <p class="pa">Fuel consumption combined: 10.7 - 10.1 l/100 km, CO2-emissions combined (WLTP)*: 244 - 230 g/km, CO2
+    Class: G</p>
+
+  <br><br>
+
+  <!-- New Container for Image and Text -->
+  <div class="stats-container">
+    <div class="car2"><img src="five2.avif" alt="image" width="599px"></div>
+    <div class="stats-text">
+      <div class="text" data-target="3.1">
+        <h2>0 s</h2>
+        <p>Acceleration 0 - 100 km/h with Sport Chrono Package</p>
+      </div>
+      <div class="text" data-target="398">
+        <h2>0 kW/0 PS</h2>
+        <p>Power (kW)/Power (PS)</p>
+      </div>
+      <div class="text" data-target="312">
+        <h2>0 km/h</h2>
+        <p>Top Speed</p>
+      </div>
+    </div>
+  </div>
+  <div class="num"><img src="num.png" alt="911" width="260px"></div>
+  <div class="i1 image">
+    <img src="four3.avif" class="i1" alt="image1" width="1170px">
+  </div>
+  <div class="i2f">
+    <div class="i2t">
+      <h2 class="i2t head">The one and <br>always.</h2>
+      <h3 class="i2t subhead">Anyone who dreams of a Porsche usually has an <br>image in their mind: the 911 has been
+        the epit-<br>ome of an exciting,
+        powerful sports car with<br> day-to-day usability for 60 years. Take a seat be-<br>hind the wheel of the new 911
+        and become
+        part<br> of a unique community.</h3>
+    </div>
+    <div class="i2 image"><img src="four4.avif" alt="image2" class="i2" width="550px" height="650px"></div>
+  </div>
+  <div class="i3 image"><img src="four5.avif" width="605px" alt="iamge3" class="i3"></div>
+  <div><img src="five3.avif" alt="image4" width="100%" height="100%"></div>
+  <br>
+  <!-- 360 DEGREE -->
+  <div class="threed">
+    <h2>Unmistakeable. From every perspective.</h2>
+    <div class="share-page">
+      360° View
+    </div>
+  </div>
+  <div class="container">
+    <img src="f1.png" alt="360 view" class="active">
+    <img src="f2.png" alt="360 view">
+    <img src="f3.png" alt="360 view">
+    <img src="f4.png" alt="360 view">
+    <img src="f5.png" alt="360 view">
+    <img src="f6.png" alt="360 view">
+    <img src="f7.png" alt="360 view">
+    <img src="f8.png" alt="360 view">
+    <img src="f9.png" alt="360 view">
+    <img src="f10.png" alt="360 view">
+    <img src="f11.png" alt="360 view">
+    <img src="f12.png" alt="360 view">
+    <img src="f13.png" alt="360 view">
+    <img src="f14.png" alt="360 view">
+    <img src="f15.png" alt="360 view">
+    <img src="f16.png" alt="360 view">
+    <img src="f17.png" alt="360 view">
+    <img src="f18.png" alt="360 view">
+    <!-- Add more images as needed -->
+  </div>
+  <div class="endtext1">
+    <h1>Consumption and Emissions.</h1>
+  </div>
+  <div class="endtext2">
+    <h4>911 Carrera (WLTP)*: Fuel consumption combined: 10.7 – 10.1 l/100 km, CO2-emissions combined
+      (WLTP)*: 244 – 230 g/km, CO2 Class: G, 911 Carrera <br>GTS (WLTP)*: Fuel consumption combined: 11.0 – 10.5 l/100
+      km,
+      CO2-emissions combined (WLTP)*: 251 – 239 g/km, CO2 Class: G, 911 Carrera 4 GTS<br> (WLTP)*: Fuel consumption
+      combined:
+      11.1 – 10.5 l/100 km, CO2-emissions combined (WLTP)*: 251 – 239 g/km, CO2 Class: G </h4>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const container = document.querySelector('.container');
+      const images = container.querySelectorAll('img');
+      let currentImage = 0;
+      let isDragging = false;
+      let startX;
+
+      function updateImage(index) {
+        if (index !== currentImage) {
+          images[currentImage].classList.remove('active');
+          images[index].classList.add('active');
+          currentImage = index;
+        }
+      }
+
+      function calculateImageIndex(x) {
+        const totalImages = images.length;
+        const imageWidth = container.offsetWidth;
+        const relativeX = Math.min(Math.max(0, x), imageWidth);
+        return Math.floor((relativeX / imageWidth) * totalImages);
+      }
+
+      container.addEventListener('mousedown', function (event) {
+        isDragging = true;
+        startX = event.clientX - container.offsetLeft;
+        container.classList.add('grabbing');
+        event.preventDefault(); // Prevent default behavior of mousedown
+      });
+
+      container.addEventListener('mouseup', function () {
+        isDragging = false;
+        container.classList.remove('grabbing');
+      });
+
+      container.addEventListener('mouseleave', function () {
+        isDragging = false;
+        container.classList.remove('grabbing');
+      });
+
+      container.addEventListener('mousemove', function (event) {
+        if (!isDragging) return;
+
+        const x = event.clientX - container.offsetLeft;
+        const imageIndex = calculateImageIndex(x);
+        updateImage(imageIndex);
+      });
+    });
+  </script>
+  <div class="cards-container">
+    <div class="card" style="background-image: url('card1.avif');">
+      <div class="card-content">
+        <h3>Paint to Sample.</h3>
+        <p>Discover Porsche Exclusive Manufaktur's very special exterior colours for your 911.</p>
+        <a href="#" class="card-button">Discover colour choices</a>
+      </div>
+    </div>
+
+    <div class="card" style="background-image: url('card2.avif');">
+      <div class="card-content">
+        <h3>Finishing.</h3>
+        <p>Discover Porsche Exclusive Manufaktur's customization options for the interior and exterior of your vehicle.
+        </p>
+        <a href="#" class="card-button">To Porsche Exclusive Manufaktur</a>
+      </div>
+    </div>
+
+    <div class="card" style="background-image: url('card3.avif');">
+      <div class="card-content">
+        <h3>Contact</h3>
+        <p>Contact a Porsche Centre near you.</p>
+        <a href="#" class="card-button">Go to contact form</a>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <!-- footer -->
+  <div class="foot">
+    <h2>More About</h2>
+  </div>
+  <div class="footer">
+    <h4>911 Carrera Coupe Models |</h4>
+    <h4> 911 Carrera Cabriolet Models</h4>
+    <h4>| 911 Targa models</h4>
+    <h4>| 911 Turbo 50 Years911 Turbo Models</h4>
+    <h4>| 911 GT3 Models</h4>
+    <h4>| 911 GT3 RS</h4>
+    <h4>| 911 Dakar</h4>
+    <h4>| 911 S/T</h4>
+  </div>
+  <br><br>
+  <div class="footline"></div>
+  <br>
+  <br>
+  <div class="footer2">
+    <div class="text1">
+      <h2>Build & Find</h2>
+      <h4>Build your Porsche</h4>
+      <h4>Compare Models</h4>
+      <h4>Search Pre-Owned</h4>
+    </div>
+    <div class="text1">
+      <h2>Online Services</h2>
+      <h4>Sign up for News</h4>
+    </div>
+    <div class="text1">
+      <h2>Behind the Scenes</h2>
+      <h4>Passion Motorsports</h4>
+      <h4>Porsche Experience</h4>
+      <h4>Porsche Classic</h4>
+      <h4>Porsche Museum</h4>
+    </div>
+    <div class="text1">
+      <h2>Porsche Company</h2>
+      <h4>Investor Relations</h4>
+      <h4>At a Glance</h4>
+      <h4>Jobs & Careers</h4>
+      <h4>FAQ</h4>
+      <h4>Christophorus - The Porsche Magazine</h4>
+    </div>
+  </div>
+  <br>
+  <div class="share-container">
+    <div class="share-page">
+      <i class="fas fa-share-alt"></i> Share Page
+    </div>
+    <div class="connect">
+      <p>Connect with Porsche</p>
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="footer-container">
+    <div class="country-region">
+      <label for="region">Change country/region:</label>
+      <select id="region">
+        <option value="region">Select a region</option>
+        <option value="americas">Americas</option>
+        <option value="europe">Europe</option>
+        <option value="asia">Asia</option>
+        <option value="oceania">Oceania</option>
+        <option value="africa">Africa</option>
+      </select>
+      <select id="country">
+        <option value="country">Select a country/region</option>
+        <!-- Americas -->
+        <option value="usa">United States</option>
+        <option value="canada">Canada</option>
+        <option value="brazil">Brazil</option>
+        <!-- Europe -->
+        <option value="germany">Germany</option>
+        <option value="uk">United Kingdom</option>
+        <option value="france">France</option>
+        <!-- Asia -->
+        <option value="china">China</option>
+        <option value="japan">Japan</option>
+        <option value="india">India</option>
+        <!-- Oceania -->
+        <option value="australia">Australia</option>
+        <option value="newzealand">New Zealand</option>
+        <!-- Africa -->
+        <option value="southafrica">South Africa</option>
+        <option value="nigeria">Nigeria</option>
+        <option value="egypt">Egypt</option>
+      </select>
+    </div>
+
+    <hr class="divider">
+
+    <div class="legal-info">
+      <p>© 2024 Dr. Ing. h.c. F. Porsche AG.
+        <a href="#">Legal notice</a>,
+        <a href="#">Privacy Policy</a>,
+        <a href="#">Cookie Policy</a>,
+        <a href="#">Consumption/Emissions</a>,
+        <a href="#">Open Source Software Notice</a>,
+        <a href="#">Whistleblower System</a>.
+      </p>
+      <p>* All new vehicles offered by Porsche are type-approved according to WLTP. Official NEDC values derived from
+        WLTP values are no longer available for new vehicles as of 1 January 2023 and can therefore not be provided.</p><br>
+      <p>Where values are indicated as ranges, they do not refer to a single, specific vehicle and are not part of the
+        offered product range. They are only for the purposes of comparison between different vehicle types. <br>Additional
+        equipment and accessories (add-on parts, tyre formats etc.) can change relevant vehicle parameters such as
+        weight, rolling resistance and aerodynamics. These factors, in addition to weather, traffic conditions and
+        driving behaviour, can influence the fuel/electricity consumption, CO₂ emissions, range and performance values
+      <p>More information about the differences between WLTP and NEDC is available at <a
+          href="#">www.porsche.com/wltp</a>.</p><br>
+      <p>** Important information about the all-electric Porsche models can be found <a href="#">here</a>.</p><br>
+    </div>
+  </div>
+</body>
+
+</html>
